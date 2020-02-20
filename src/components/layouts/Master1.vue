@@ -19,17 +19,17 @@
             </div>
         </header>
         <!--        Main Content start-->
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8 col-md-10 mx-auto">
-                    <slot name="content"></slot>
-                    <slot name="about"></slot>
-                    <slot name="contact"></slot>
-                    <slot name="sample"></slot>
+        <article class="abc">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-md-10 mx-auto">
 
+                        <slot name="sample"></slot>
+
+                    </div>
                 </div>
             </div>
-        </div>
+        </article>
         <!--    Footer start -->
         <Footer/>
     </div>
@@ -48,5 +48,7 @@
 </script>
 
 <style scoped>
-
+.abc{
+    background-color: red;
+}
 </style>
