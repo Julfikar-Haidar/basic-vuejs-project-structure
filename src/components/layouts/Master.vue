@@ -3,21 +3,7 @@
     <div>
         <!--    Navbar start  -->
         <Nav/>
-        <!-- Page Header -->
-        <header class="masthead"
-                style="background-image: url('https://blackrockdigital.github.io/startbootstrap-clean-blog/img/home-bg.jpg')">
-            <div class="overlay"></div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-8 col-md-10 mx-auto">
-                        <div class="site-heading">
-                            <h1>Clean Blog</h1>
-                            <span class="subheading">A Blog Theme by Start Bootstrap</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </header>
+       <Header v-bind:headerContent="headerContent"></Header>
         <!--        Main Content start-->
         <div class="container">
             <div class="row">
@@ -38,11 +24,13 @@
 <script>
     import Nav from '../layouts/partials/Nav'
     import Footer from '../layouts/partials/Footer'
+    import Header from '../layouts/partials/Header'
 
     export default {
         name: "Master",
+        props: ["headerContent"],
         components: {
-            Nav, Footer
+            Nav, Footer,Header
         }
     }
 </script>

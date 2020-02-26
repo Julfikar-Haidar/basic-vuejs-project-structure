@@ -1,6 +1,6 @@
 <template>
     <div>
-        <Master>
+        <Master v-bind:headerContent="headerContent">
             <template v-slot:about>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe nostrum ullam eveniet pariatur
                     voluptates odit, fuga atque ea nobis sit soluta odio, adipisci quas excepturi maxime quae totam
@@ -23,6 +23,15 @@
         name: "About",
         components: {
             Master
+        },
+         data () {
+            return {
+                headerContent: {
+                    backgroundImage:"https://blackrockdigital.github.io/startbootstrap-clean-blog/img/about-bg.jpg",
+                    main_title:"About Me",
+                    sub_title:"This is what I do."
+                }
+            }
         }
     }
 </script>

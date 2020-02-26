@@ -2,6 +2,9 @@
 import Vue from 'vue'
 import App from './App.vue'
 
+//axios initial
+Window.axios = require('axios')
+
 /*Custom Router File Importing*/
 // Router (const variable array)
 import {router} from "./router/router";
